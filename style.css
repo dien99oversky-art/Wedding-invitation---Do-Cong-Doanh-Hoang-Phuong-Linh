@@ -1,0 +1,93 @@
+*{box-sizing:border-box}
+:root{--paper:#f7f2eb;--ink:#292622;--muted:#756e66;--line:#d9cec1;--accent:#8d6d52}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Montserrat,Arial,sans-serif;font-weight:300;line-height:1.7}
+img{display:block;width:100%;height:100%;object-fit:cover}
+a{color:inherit}
+.hero{height:100svh;min-height:680px;position:relative;display:flex;align-items:center;justify-content:center;background:url("assets/anh-cuoi-02.jpg") center/cover no-repeat;color:#fff;text-align:center}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,12,.25),rgba(20,16,12,.5))}
+.hero-content{position:relative;z-index:1;padding:30px}
+.eyebrow{font-size:10px;letter-spacing:.28em;font-weight:500;margin:0 0 15px;color:var(--accent)}
+.hero .eyebrow{color:#fff;opacity:.9}
+h1,h2,h3,.names strong,.footer-names{font-family:"Cormorant Garamond",Georgia,serif}
+h1{font-size:clamp(50px,9vw,105px);line-height:.85;font-weight:500;margin:25px 0}
+h1 span{font-size:.5em;font-style:italic;font-weight:400}
+.hero .date{font-size:18px;letter-spacing:.35em;margin:30px 0 0}
+.hero .lunar{font-size:11px;letter-spacing:.12em;opacity:.85;color:#fff!important}
+.scroll{position:absolute;top:calc(100svh - 95px);left:50%;transform:translateX(-50%);font-size:9px;letter-spacing:.25em;text-decoration:none;white-space:nowrap}
+.scroll span{display:block;font-size:18px;margin-top:3px}
+.section{padding:110px 7vw;max-width:1280px;margin:auto}
+.intro{text-align:center;max-width:900px}
+.ornament{font-family:Georgia,serif;font-size:38px;color:var(--accent);margin-bottom:20px}
+h2{font-size:clamp(42px,6vw,72px);line-height:1.05;font-weight:500;margin:0 0 25px}
+.lead{max-width:650px;margin:0 auto;color:var(--muted);font-size:14px}
+.names{display:flex;justify-content:center;align-items:center;gap:35px;margin-top:55px}
+.names div{display:flex;flex-direction:column;gap:6px}
+.names small{font-size:9px;letter-spacing:.2em;color:var(--muted)}
+.names strong{font-size:30px;font-weight:500}
+.names>span{font-family:"Cormorant Garamond";font-size:34px;color:var(--accent)}
+.section-head{text-align:center;margin-bottom:45px}
+.gallery-grid{display:grid;grid-template-columns:1.05fr 1fr;grid-template-rows:360px 360px;gap:18px}
+.gallery-item{margin:0;overflow:hidden}
+.gallery-item.tall{grid-row:1/3}
+.gallery-item img{transition:transform .7s ease}
+.gallery-item:hover img{transform:scale(1.03)}
+.countdown{text-align:center;background:#eee7df;max-width:none}
+.countdown-grid{display:grid;grid-template-columns:repeat(4,1fr);max-width:850px;margin:55px auto 30px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.countdown-grid div{padding:22px 10px;border-right:1px solid var(--line)}
+.countdown-grid div:last-child{border-right:0}
+.countdown-grid strong{display:block;font-family:"Cormorant Garamond";font-size:50px;font-weight:500;line-height:1}
+.countdown-grid span{font-size:9px;letter-spacing:.18em;color:var(--muted)}
+.event-date{font-size:11px;letter-spacing:.2em}
+.family-grid,.event-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.family-card,.event-card{border:1px solid var(--line);padding:45px;text-align:center}
+.family-card h3{font-size:39px;font-weight:500;margin:5px 0 30px}
+.parents{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:17px 0}
+.parents p{margin:7px 0;font-size:13px}
+.parents span{display:inline-block;width:45px;text-align:left;color:var(--muted);font-size:10px;letter-spacing:.12em}
+.address{margin-top:28px}
+.address b{font-size:9px;letter-spacing:.2em;font-weight:500}
+.address p{font-size:13px;color:var(--muted)}
+.address a{font-size:9px;letter-spacing:.15em;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:4px}
+.events{max-width:none;text-align:center;background:#e9e1d7}
+.event-card{background:rgba(255,255,255,.3);padding:50px 35px}
+.event-card.featured{background:#f7f2eb}
+.event-icon{font-family:Georgia,serif;color:var(--accent);font-size:35px}
+.event-card h3{font-size:64px;line-height:1;margin:10px 0}
+.event-card p:not(.eyebrow){font-size:13px;color:var(--muted)}
+.event-card strong{color:var(--ink)}
+.event-divider{width:45px;border-top:1px solid var(--accent);margin:25px auto}
+.lunar{font-size:11px!important;font-style:italic;color:#8a8177!important}
+.quote{text-align:center;padding-top:140px;padding-bottom:140px}
+.quote-mark{font-family:Georgia,serif;color:var(--accent);font-size:90px;line-height:.5}
+blockquote{font-family:"Cormorant Garamond";font-size:clamp(30px,5vw,52px);line-height:1.2;margin:30px auto;max-width:950px}
+.quote>p:last-child{font-size:10px;letter-spacing:.25em;color:var(--muted)}
+.rsvp{text-align:center;background:#292622;color:#f7f2eb;max-width:none}
+.rsvp .eyebrow{color:#bba38a}
+.rsvp h2{color:#fff}
+.rsvp .lead{color:#c6bdb4}
+.rsvp-btn{display:inline-block;margin-top:35px;border:1px solid #c9b8a7;padding:14px 28px;text-decoration:none;font-size:10px;letter-spacing:.2em}
+footer{text-align:center;padding:55px 20px;background:#211f1c;color:#cfc5bb}
+.footer-names{font-size:30px}
+.footer-names span{font-style:italic;color:#a98b70}
+footer p{font-size:9px;letter-spacing:.25em}
+footer .copyright{opacity:.5;letter-spacing:.1em;margin-top:28px}
+.music-btn{position:fixed;right:20px;top:20px;z-index:20;width:42px;height:42px;border:1px solid rgba(255,255,255,.6);border-radius:50%;background:rgba(30,26,22,.45);color:#fff;cursor:pointer;font-size:19px;backdrop-filter:blur(6px)}
+.music-btn.playing{animation:spin 4s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:700px){
+ .section{padding:80px 22px}
+ .hero{min-height:650px}
+ h1{font-size:53px}
+ .hero .date{font-size:14px}
+ .names{gap:14px}
+ .names strong{font-size:23px}
+ .gallery-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:270px 210px}
+ .gallery-item.tall{grid-row:auto;grid-column:1/3}
+ .family-grid,.event-grid{grid-template-columns:1fr}
+ .family-card,.event-card{padding:35px 22px}
+ .countdown-grid strong{font-size:38px}
+ .countdown-grid span{font-size:8px}
+ .countdown-grid div{padding:18px 4px}
+ blockquote br{display:none}
+}
